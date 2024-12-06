@@ -2,7 +2,7 @@ const totalQuestions = questions.length;
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
-let incorrectAnswers = 0;
+let incorrectAnswers = [];
 let skippedQuestions = [];
 let submitButton;
 let skipButton;
@@ -74,7 +74,7 @@ function checkAnswer() {
   if (selectedAnswer === question.correctAnswer) {
     correctAnswers++;
   } else {
-    incorrectAnswers++;
+    incorrectAnswers.push(question);
   }
 
   highlightAnswers(question.correctAnswer, selectedAnswer);
@@ -86,7 +86,7 @@ function checkAnswer() {
 
   if (correctAnswers >= thresholdCorrect || (currentQuestionIndex >= totalQuestions && skippedQuestions.length === 0)) {
     endQuiz();
-  } else if (incorrectAnswers > maxIncorrect) {
+  } else if (incorrectAnswers.length > maxIncorrect) {
     endQuiz();
   } else {
     submitButton.style.display = "none";
@@ -116,7 +116,7 @@ function displaySource(source, link) {
 }
 
 function updateProgressBar() {
-  const totalAnswered = correctAnswers + incorrectAnswers;
+  const totalAnswered = correctAnswers + incorrectAnswers.length;
   const progressPercentage = (totalAnswered / totalQuestions) * 100;
   const progressBar = document.getElementById("progress-bar");
   progressBar.style.width = `${progressPercentage}%`;
@@ -131,16 +131,16 @@ function updateIncorrectCounter() {
   const maxIncorrect = totalQuestions * 0.2;
   const incorrectCounter = document.getElementById("incorrect-counter");
 
-  if (incorrectAnswers > maxIncorrect) {
+  if (incorrectAnswers.length > maxIncorrect) {
     incorrectCounter.innerHTML = `${correctAnswers} correct out of ${totalQuestions}. Your score is ${(correctAnswers / totalQuestions * 100).toFixed(2)}%.`;
   } else {
-    incorrectCounter.innerHTML = `<span class="${incorrectAnswers > 0 ? 'red-text' : ''}">${incorrectAnswers}</span> of ${maxIncorrect} (${maxIncorrect - incorrectAnswers} remaining)`;
+    incorrectCounter.innerHTML = `<span class="${incorrectAnswers.length > 0 ? 'red-text' : ''}">${incorrectAnswers.length}</span> of ${maxIncorrect} (${maxIncorrect - incorrectAnswers.length} remaining)`;
   }
 }
 
 function endQuiz() {
   const thresholdCorrect = totalQuestions * 0.8;
-  let totalAnswered = correctAnswers + incorrectAnswers;
+  let totalAnswered = correctAnswers + incorrectAnswers.length;
   let percentage;
   let resultMessage;
 
@@ -148,7 +148,7 @@ function endQuiz() {
     resultMessage = "You Passed!";
     percentage = (correctAnswers / totalAnswered) * 100;
     updateProgressBarBasedOnTotalAnswered(totalAnswered);
-  } else if (incorrectAnswers > totalQuestions * 0.2) {
+  } else if (incorrectAnswers.length > totalQuestions * 0.2) {
     resultMessage = "You Failed.";
     totalAnswered = totalQuestions;
     percentage = (correctAnswers / totalQuestions) * 100;
@@ -158,6 +158,7 @@ function endQuiz() {
   }
 
   document.getElementById("question").textContent = `${resultMessage} You got ${correctAnswers} correct out of ${totalAnswered} questions. Your score is ${percentage.toFixed(2)}%.`;
+  document.getElementById("viewIncorrectAnswers").textContent = 'View Incorrect Answers';
   document.getElementById("options").style.display = "none";
   document.getElementById("source").style.display = "none";
   document.getElementById("link").style.display = "none";
@@ -173,5 +174,19 @@ function updateProgressBarBasedOnTotalAnswered(totalAnswered) {
   progressBar.textContent = `${totalAnswered} / ${totalQuestions}`;
   progressBar.style.backgroundColor = 'green';
 }
+
+function viewIncorrectAnswers() {
+  const newWindow = window.open('', '_blank');
+  newWindow.document.write('<html><head><title>Incorrect Answers</title></head><body>');
+  incorrectAnswers.forEach(answer => {
+    newWindow.document.write(`<h2>${answer.question}</h2>`);
+    newWindow.document.write(`<p>Source: ${answer.source}</p>`);
+    newWindow.document.write(`<p><a href="${answer.link}" target="_blank">${answer.link}</a></p>`);
+  });
+  newWindow.document.write('</body></html>');
+  newWindow.document.close();
+}
+
+document.getElementById('viewIncorrectAnswers').addEventListener('click', viewIncorrectAnswers);
 
 displayQuestion();
