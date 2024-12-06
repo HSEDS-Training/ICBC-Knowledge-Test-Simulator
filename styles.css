@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 20px 0;
+  height: 20px; /* Thinner progress bar */
+  position: relative;
+}
+
+#progress-bar {
+  width: 0;
+  height: 100%;
+  background-color: #007bff; /* Blue color */
+  border-radius: 10px;
+  text-align: center;
+  line-height: 20px; /* Adjusted for thinner bar */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress-container::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0; /* Grey color for unanswered questions */
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#incorrect-counter {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#quiz-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px; /* Adjusted for spacing */
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: center; /* Center the question text */
+}
+
+#options {
+  list-style: none;
+  padding: 0;
+}
+
+#options li {
+  margin-bottom: 10px;
+}
+
+#button-container button {
+  margin-right: 10px;
+}
+
+.red-text {
+  color: red;
+}
+
+#question img {
+  display: block;
+  margin: 10px auto; /* Center the image */
+  max-width: 100%; /* Ensure the image fits within the container */
+}
+
+.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.correct::before {
+  content: '✔ ';
+  color: #155724;
+}
+
+.incorrect::before {
+  content: '✘ ';
+  color: #721c24;
+}
+
+#source {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#link {
+  font-size: 14px;
+  text-align: center;
+}
