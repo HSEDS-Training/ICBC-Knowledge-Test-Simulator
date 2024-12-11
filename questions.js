@@ -495,7 +495,7 @@ let questions = [{
   link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q66.png"
   },
-  */{
+  {
   question: "This sign means",
   options: ["steep hill ahead - slow or gear down", "runaway vehicle lane ahead", "truck stop ahead", "truck route ahead"],
   chapter: "Chapter 3: Signs, Signals and Road Markings",
@@ -503,7 +503,7 @@ let questions = [{
   link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q67.png"
   },
-  /*{
+  {
   question: "This sign means",
   options: ["Bump or rough road ahead; slow down.", "Industrial area ahead.", "Steep hills ahead.", "Danger; road ends ahead."],
   chapter: "Chapter 3: Signs, Signals and Road Markings",
