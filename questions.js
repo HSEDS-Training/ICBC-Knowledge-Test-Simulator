@@ -487,7 +487,7 @@ let questions = [{
   link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q65.png"
   },
-  */{
+  {
   question: "This sign means:",
   options: ["cyclists may be on roadway", "bicycle lane ahead", "bicycles prohibited", "do not pass cyclists"],
   chapter: "Chapter 3: Signs, Signals and Road Markings",
@@ -495,7 +495,7 @@ let questions = [{
   link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q66.png"
   },
-  {
+  */{
   question: "This sign means",
   options: ["steep hill ahead - slow or gear down", "runaway vehicle lane ahead", "truck stop ahead", "truck route ahead"],
   chapter: "Chapter 3: Signs, Signals and Road Markings",
