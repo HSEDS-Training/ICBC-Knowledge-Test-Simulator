@@ -7,7 +7,7 @@ let skippedQuestions = [];
 let submitButton;
 let skipButton;
 
-function getRandomQuestions(questions, numQuestions = 10) {
+function getRandomQuestions(questions, numQuestions = 50) {
   // Shuffle the questions array
   const shuffledQuestions = questions.sort(() => 0.5 - Math.random());
   
@@ -28,8 +28,16 @@ function getRandomQuestions(questions, numQuestions = 10) {
 questions = getRandomQuestions(questions, totalQuestions);
 
 function displayQuestion() {
+  // Check if there are any skipped questions to display
   if (currentQuestionIndex >= totalQuestions && skippedQuestions.length > 0) {
     currentQuestionIndex = skippedQuestions.shift();
+  }
+
+  // Ensure we don't go out of bounds
+  if (currentQuestionIndex >= totalQuestions && skippedQuestions.length === 0) {
+    // Handle end of quiz scenario
+    console.log("Quiz completed!");
+    return;
   }
 
   const question = questions[currentQuestionIndex];
@@ -42,7 +50,7 @@ function displayQuestion() {
     li.innerHTML = `<input type="radio" name="answer" value="${index}"> ${option}`;
     optionsList.appendChild(li);
   });
-  
+
   if (question.image) {
     const imageElement = document.createElement('img');
     imageElement.src = question.image;
@@ -60,7 +68,7 @@ function displayQuestion() {
     submitButton = createButton("Submit", checkAnswer);
     document.getElementById("button-container").appendChild(submitButton);
   } else {
-    submitButton.style.display = "inline"; // Corrected from "in-line" to "inline"
+    submitButton.style.display = "inline";
   }
 
   if (!skipButton) {
