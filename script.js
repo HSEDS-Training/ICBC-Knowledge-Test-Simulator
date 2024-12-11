@@ -1,4 +1,4 @@
-const totalQuestions = 10;
+const totalQuestions = 50;
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
