@@ -1,4 +1,4 @@
-const totalQuestions = questions.length;
+const totalQuestions = 10;
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
@@ -6,6 +6,26 @@ let incorrectAnswers = [];
 let skippedQuestions = [];
 let submitButton;
 let skipButton;
+
+function getRandomQuestions(questions, numQuestions = 10) {
+  // Shuffle the questions array
+  const shuffledQuestions = questions.sort(() => 0.5 - Math.random());
+  
+  // Select the first numQuestions questions
+  const selectedQuestions = shuffledQuestions.slice(0, numQuestions);
+  
+  // Shuffle the options for each selected question and track the correct answer
+  selectedQuestions.forEach(question => {
+    const correctAnswer = question.options[0]; // Store the correct answer's value
+    question.options = question.options.sort(() => 0.5 - Math.random());
+    question.correctIndex = question.options.indexOf(correctAnswer); // Find the new index of the correct answer
+  });
+
+  return selectedQuestions;
+}
+
+// Initialize the quiz with random questions
+questions = getRandomQuestions(questions, totalQuestions);
 
 function displayQuestion() {
   if (currentQuestionIndex >= totalQuestions && skippedQuestions.length > 0) {
@@ -22,7 +42,7 @@ function displayQuestion() {
     li.innerHTML = `<input type="radio" name="answer" value="${index}"> ${option}`;
     optionsList.appendChild(li);
   });
-
+  
   if (question.image) {
     const imageElement = document.createElement('img');
     imageElement.src = question.image;
@@ -71,13 +91,13 @@ function checkAnswer() {
   const selectedAnswer = parseInt(document.querySelector('input[name="answer"]:checked').value);
   const question = questions[currentQuestionIndex];
 
-  if (selectedAnswer === question.correctAnswer) {
+  if (selectedAnswer === question.correctIndex) {
     correctAnswers++;
   } else {
     incorrectAnswers.push(question);
   }
 
-  highlightAnswers(question.correctAnswer, selectedAnswer);
+  highlightAnswers(question.correctIndex, selectedAnswer);
   displaySource(question.source, question.link);
   currentQuestionIndex++;
 
@@ -128,11 +148,11 @@ function updateProgressBar() {
 }
 
 function updateIncorrectCounter() {
-  const maxIncorrect = totalQuestions * 0.2;
+  const maxIncorrect = Math.round(totalQuestions * 0.2);
   const incorrectCounter = document.getElementById("incorrect-counter");
 
   if (incorrectAnswers.length > maxIncorrect) {
-    incorrectCounter.innerHTML = `${correctAnswers} correct out of ${totalQuestions}. Your score is ${(correctAnswers / totalQuestions * 100).toFixed(2)}%.`;
+    incorrectCounter.innerHTML = `${correctAnswers} correct out of ${totalQuestions}. Your score is ${Math.round((correctAnswers / totalQuestions) * 100)}%.`;
   } else {
     incorrectCounter.innerHTML = `<span class="${incorrectAnswers.length > 0 ? 'red-text' : ''}">${incorrectAnswers.length}</span> of ${maxIncorrect} (${maxIncorrect - incorrectAnswers.length} remaining)`;
   }
