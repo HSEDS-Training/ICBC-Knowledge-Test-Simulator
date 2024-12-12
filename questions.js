@@ -793,8 +793,7 @@ let questions = [{
   options: ["on all roads where the speed limit is 60km/h or lower", "always yield to a public transit bus regardless of the posted speed limit.", "on all roads where the speed limit is 30km/h or lower", "only if there is no traffic behind you"],
   chapter: "Chapter 6: Sharing the Road; Public Transit Buses",
   source: "",
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers6.pdf",
-  image: "images/q107.png"
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers6.pdf"
   },
   {
   question: "Why is increasing the space margin between you and a car in front of your vehicle a good idea when being tailgated?",
