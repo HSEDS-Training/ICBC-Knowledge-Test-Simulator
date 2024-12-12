@@ -837,8 +837,7 @@ let questions = [{
   options: ["you should be ready for this stale green light to change.  Be prepared to stop if necessary.", "look ahead to the intersection and if clear, speed up through the light.", "begin braking as this stale green light will soon change.", "you do not need to think about the light.  It is green."],
   chapter: "Chapter 4: Rules of the Road Right-of-Way At Intersections",
   source: "",
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf",
-  image: "images/q113.png"
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf"
   },
   {
   question: "You are stopped at a railway crossing where there are flashing lights and bells.  When are you allowed to proceed?",
