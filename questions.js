@@ -815,8 +815,7 @@ let questions = [{
   options: ["The side of a train already crossing the road can be difficult to see at night and the car driver does not see the train.", "headlights were not turned on", "of driver fatigue ", "of weather conditions"],
   chapter: "Chapter 6: Sharing the Road; Trains",
   source: "",
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers6.pdf",
-  image: "images/q110.png"
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers6.pdf"
   },
   {
   question: "What are the only colours of flashing lights you will find at a railroad crossing?",
@@ -837,7 +836,8 @@ let questions = [{
   options: ["you should be ready for this stale green light to change.  Be prepared to stop if necessary.", "look ahead to the intersection and if clear, speed up through the light.", "begin braking as this stale green light will soon change.", "you do not need to think about the light.  It is green."],
   chapter: "Chapter 4: Rules of the Road Right-of-Way At Intersections",
   source: "",
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf"
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf",
+  image: "images/q113.png"
   },
   {
   question: "You are stopped at a railway crossing where there are flashing lights and bells.  When are you allowed to proceed?",
@@ -867,7 +867,7 @@ let questions = [{
   source: "Allow at least three seconds following distance when you are following another vehicle on an unpaved road where dust or gravel may be in the air.",
   link: "http://www.icbc.com/driver-licensing/Documents/drivers5.pdf"
   },
-  {
+  /*{
   question: "What are these cyclists signaling to do?",
   options: ["Turn right.", "They are about to get off their bikes.", "Turn left.", "Stop or slow down."],
   chapter: "Chapter 5: See - Think - Do; Communication",
@@ -875,7 +875,7 @@ let questions = [{
   link: "http://www.icbc.com/driver-licensing/Documents/drivers5.pdf",
   image: "images/q118.png"
   },
-  {
+  */{
   question: "This sign on a transit bus when it is signalling to enter traffic means",
   options: ["you must yield to them where the speed limit is 60 km/h or lower.", "yield, regardless of the posted speed limit.", "yield on all roads where the speed limit is 30 km/h or lower.", "yield only if there is no traffic behind you."],
   chapter: "Chapter 6: Sharing the Road; Public Transit Buses",
@@ -1130,303 +1130,138 @@ let questions = [{
   },
   
   /*{
-  question: "This sign means:"
-  },
-  options: ["Two-way left turn lane."
-    },
-    "Left turns only at this intersection."
-    "Two-way traffic ahead."
-    "Left and right turns allowed at this intersection."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  question: "This sign means:",
+  options: ["Two-way left turn lane.", "Left turns only at this intersection.", "Two-way traffic ahead.", "Left and right turns allowed at this intersection."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q154.png"
   },
-  "_id": "154"
-}, {
-  question: "This sign means:"
-  },
-  options: ["No turns permitted at this intersection."
-    },
-    "No lane changes allowed."
-    "One-way traffic only."
-    "Yield to traffic in intersection."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  */{
+  question: "This sign means:",
+  options: ["No turns permitted at this intersection.", "No lane changes allowed.", "One-way traffic only.", "Yield to traffic in intersection."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q155.png"
   },
-  "_id": "155"
-}, {
-  question: "This sign means slow to 30 km/h:"
-  },
-  options: ["Every day from dawn to dusk."
-    },
-    "When you see children on road."
-    "Weekdays from dawn to dusk."
-    "Weekends from dawn to dusk."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  /*{
+  question: "This sign means slow to 30 km/h:",
+  options: ["Every day from dawn to dusk.", "When you see children on road.", "Weekdays from dawn to dusk.", "Weekends from dawn to dusk."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q156.png"
   },
-  "_id": "156"
-}, {
-  question: "This sign means:"
-  },
-  options: ["Playground nearby - drive with caution."
-    },
-    "Slow to 30 km/h if pedestrians crossing."
-    "Sports stadium nearby - watch for hazards."
-    "School crosswalk - stop for pedestrians."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  {
+  question: "This sign means:",
+  options: ["Playground nearby - drive with caution.", "Slow to 30 km/h if pedestrians crossing.", "Sports stadium nearby - watch for hazards.", "School crosswalk - stop for pedestrians."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q157.png"
   },
-  "_id": "157"
-}, {
-  question: "A steady green arrow means:"
-  },
-  options: ["You may turn in the direction of the arrow if the intersection is clear."
-    },
-    "The cross-street is a one way street in the direction of the arrow."
-    "You may turn in the direction of the arrow after coming to a complete stop."
-    "You may only turn left at this intersection."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  */{
+  question: "A steady green arrow means:",
+  options: ["You may turn in the direction of the arrow if the intersection is clear.", "The cross-street is a one way street in the direction of the arrow.", "You may turn in the direction of the arrow after coming to a complete stop.", "You may only turn left at this intersection."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q158.png"
   },
-  "_id": "158"
-}, {
-  question: "A steady red light means:"
-  },
-  options: ["Stop. After coming to a full stop you may turn right or turn left onto a one-way street unless a sign forbids it."
-    },
-    "Stop if traffic is approaching."
-    "You must stop unless you are turning right."
-    "Stop, then proceed when safe."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  {
+  question: "A steady red light means:",
+  options: ["Stop. After coming to a full stop you may turn right or turn left onto a one-way street unless a sign forbids it.", "Stop if traffic is approaching.", "You must stop unless you are turning right.", "Stop, then proceed when safe."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q159.png"
   },
-  "_id": "159"
-}, {
-  question: "A flashing red light means:"
-  },
-  options: ["Stop and proceed when it is safe to do so."
-    },
-    "Stop until the light changes to a flashing green light."
-    "Slow down and proceed through intersection if safe."
-    "Stop until the light changes to a flashing yellow light."
-  chapter: "Chapter 3: Signs, Signals and Road Markings"
-  },
-  source: ""
-  },
-  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-  },
+  {
+  question: "A flashing red light means:",
+  options: ["Stop and proceed when it is safe to do so.", "Stop until the light changes to a flashing green light.", "Slow down and proceed through intersection if safe.", "Stop until the light changes to a flashing yellow light."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
   image: "images/q160.png"
   },
-        "_id": "160"
-      }, {
-        question: "A flashing yellow traffic light means:"
-        },
-        options: ["Slow down and be prepared to stop."
-          },
-          "The light is about to change to red."
-          "Stop."
-          "The light is about to change to green."
-        chapter: "Chapter 3: Signs, Signals and Road Markings"
-        },
-        source: ""
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf"
-        },
-        image: "images/q161.png"
-        },
-        "_id": "161"
-      }, {
-        question: "If you are in the Graduated Licensing Program (GLP), are you allowed to use a GPS navigation device while driving?"
-        },
-        options: ["No, using a GPS as an electronic device can be a distraction."
-          },
-          "Only if the destination is programmed into the GPS before driving."
-          "Only if the GPS device is guiding you by audio (i.e. on speaker)."
-          "Only when stopped such as at a red traffic light."
-        chapter: "Chapter 7: Personal strategies"
-        },
-        source: "GLP drivers are restricted from operating hands-free electronic devices while driving."
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
-        },
-        "_id": "162"
-      }, {
-        question: "While driving, a hand held device may be used to…"
-        },
-        options: ["none of these are allowed."
-          },
-          "view an email or text."
-          "select songs on your vehicle's audio system."
-          "check for directions via GPS."
-        chapter: "Chapter 7: Personal strategies"
-        },
-        source: "You can use your phone to dial 911 in an emergency only. Using your cell phone without a hands-free device while driving in any other situation is illegal and will result in penalties and fines."
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
-        },
-        "_id": "163"
-      }, {
-        question: "I am allowed to check text messages in my vehicle…"
-        },
-        options: ["when the vehicle is safely parked off the roadway."
-          },
-          "when stopped at a red traffic light."
-          "when stopped in heavy traffic."
-          "all of these are allowed."
-        chapter: "Chapter 7: Personal strategies "
-        },
-        source: "If you do need to make or receive a call, pull over as soon as it's safe to do so; stay focused on the road and keep the conversation brief."
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
-        },
-        "_id": "164"
-      }, {
-        question: "As a Class 7 L or N driver, I am allowed to use my hands free device while driving…"
-        },
-        options: ["for emergency calls only."
-          },
-          "for skipping through music tracks when connected to my vehicle's audio system. "
-          "to check the map on GPS."
-          "never."
-        chapter: "Chapter 7: Personal strategies"
-        },
-        source: "You can use your phone to dial 911 in an emergency only. Using your cell phone without a hands-free device while driving in any other situation is illegal and will result in penalties and fines."
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
-        },
-        "_id": "165"
-      }, {
-        question: "You're driving at the speed limit in the left lane of an 80km/h multi-lane highway. A car approaches from behind. You must:"
-        },
-        options: ["safely pull into to nearest lane on your right to let the other vehicle pass."
-          },
-          "maintain your lane position."
-          "increase your speed to match the vehicle behind you."
-          "slow down to give yourself more space to safely brake."
-        chapter: "Chapter 4: Rules of the road"
-        },
-        source: "When on a multi-lane highway with a posted speed limit above 80km/h and traffic moving at least 50km/h, you must avoid using the left lane if it blocks other drivers from passing. Drivers who block the left lane increase the risk caused by aggressive drivers who may try to pass on the right or tailgate. "
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf"
-        },
-        image: "images/q166.png"
-        },
-        "_id": "166"
-      }, {
-        question: "You're driving 90km/h in the left lane of a multi-lane highway in a rural area. Must you move over to the right?"
-        },
-        options: ["Unless any vehicle approaches from behind, you may stay in the left lane to keep a greater distance from any wildlife on the road."
-          },
-          "You're always required to keep right on high speed roads unless passing."
-          "You may stay in the left lane as long as you're driving at the speed limit."
-          "Only if emergency vehicles with flashing lights are approaching you from behind."
-        chapter: "Chapter 4: Rules of the road"
-        },
-        source: "If there's no traffic behind you it is permitted to drive in the left lane.  On rural roads it is sometimes safer to stay in the left to avoid wildlife near the highway.  When a vehicle approaches from behind move over to the right to let them pass. "
-        },
-        link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf"
-        },
-        image: "images/q167.png"
-        },
-        "_id": "167"
-      }, {
-        question: "Can I listen to music from my electronic device while driving?"
-        },
-        options: ["Yes, you can listen to music from an electronic device while driving, provided that it is connected to the in-vehicle audio system, and you don't touch any electronic devices while operating the vehicle."
-          },
-          "Yes, you can listen to music from an electronic device while driving, provided that you are wearing earbuds or an ear piece"
-          "No, you may not connect your electronic device in advance and listen to music with your in-vehicle system. "
-          "Yes, you can listen to music from an electronic device while driving, as long as the device is securely attached to the vehicle's dashboard. "
-        chapter: "Chapter 7: Personal Strategies; Keeping Focused"
-        },
-        source: ""
-        },
-        link: ""
-        },
-        image: ""
-        },
-        "_id": "168"
-      }, {
-        question: "Which of the following would not qualify as an emergency call that I can make while driving?"
-        },
-        options: ["To a family member"
-          },
-          "To the police"
-          "To the fire department"
-          "To ambulance services "
-        chapter: "Chapter 7: Personal Strategies; Keeping Focused "
-        },
-        source: ""
-        },
-        link: ""
-        },
-        image: ""
-        },
-        "_id": "169"
-      }, {
-        question: "When can I use a personal electronic device if I'm in the Graduated Licensing Program (GLP)?"
-        },
-        options: ["None of the above - I cannot use a personal electronic device in the GLP"
-          },
-          "I've been in the program for at least six months"
-          "I've secured my cell phone to the vehicle"
-          "I'm using a speaker phone or hands-free phone "
-        chapter: "Chapter 7: Personal Strategies; Keeping Focused"
-        },
-        source: ""
-        },
-        link: ""
-        },
-        image: ""
-        },
-        "_id": "170"
-      }, {
-        question: "If I am at a red light or stopped in traffic, can I look at a text I just received?"
-        },
-        options: ["No, you may not operate your cell phone while on the road including when you're stopped in traffic."
-          },
-          "Yes, you can quickly look at your screen but not reply to any messages."
-          "Yes, whenever a vehicle is not moving means you're not driving."
-          "Yes, as long as the light has just turned red. You have about a minute to safely use your phone. "
-        chapter: "Chapter 7: Personal Strategies; Keeping Focused"
-        },
-        source: ""
-        },
-        link: ""
-        },
-        image: ""
-        },
-        "_id": "171"
-      }]*/
-      
-]
+  {
+  question: "A flashing yellow traffic light means:",
+  options: ["Slow down and be prepared to stop.", "The light is about to change to red.", "Stop.", "The light is about to change to green."],
+  chapter: "Chapter 3: Signs, Signals and Road Markings",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers3.pdf",
+  image: "images/q161.png"
+  },
+  {
+  question: "If you are in the Graduated Licensing Program (GLP), are you allowed to use a GPS navigation device while driving?",
+  options: ["No, using a GPS as an electronic device can be a distraction.", "Only if the destination is programmed into the GPS before driving.", "Only if the GPS device is guiding you by audio (i.e. on speaker).", "Only when stopped such as at a red traffic light."],
+  chapter: "Chapter 7: Personal strategies",
+  source: "GLP drivers are restricted from operating hands-free electronic devices while driving.",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "While driving, a hand held device may be used to…",
+  options: ["none of these are allowed.", "view an email or text.", "select songs on your vehicle's audio system.", "check for directions via GPS."],
+  chapter: "Chapter 7: Personal strategies",
+  source: "You can use your phone to dial 911 in an emergency only. Using your cell phone without a hands-free device while driving in any other situation is illegal and will result in penalties and fines.",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "I am allowed to check text messages in my vehicle…",
+  options: ["when the vehicle is safely parked off the roadway.", "when stopped at a red traffic light.", "when stopped in heavy traffic.", "all of these are allowed."],
+  chapter: "Chapter 7: Personal strategies ",
+  source: "If you do need to make or receive a call, pull over as soon as it's safe to do so; stay focused on the road and keep the conversation brief.",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "As a Class 7 L or N driver, I am allowed to use my hands free device while driving…",
+  options: ["for emergency calls only.", "for skipping through music tracks when connected to my vehicle's audio system.", "to check the map on GPS.", "never."],
+  chapter: "Chapter 7: Personal strategies",
+  source: "You can use your phone to dial 911 in an emergency only. Using your cell phone without a hands-free device while driving in any other situation is illegal and will result in penalties and fines.",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "You're driving at the speed limit in the left lane of an 80km/h multi-lane highway. A car approaches from behind. You must:",
+  options: ["safely pull into to nearest lane on your right to let the other vehicle pass.", "maintain your lane position.", "increase your speed to match the vehicle behind you.", "slow down to give yourself more space to safely brake."],
+  chapter: "Chapter 4: Rules of the road",
+  source: "When on a multi-lane highway with a posted speed limit above 80km/h and traffic moving at least 50km/h, you must avoid using the left lane if it blocks other drivers from passing. Drivers who block the left lane increase the risk caused by aggressive drivers who may try to pass on the right or tailgate. ",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf",
+  image: "images/q166.png"
+  },
+  {
+  question: "You're driving 90km/h in the left lane of a multi-lane highway in a rural area. Must you move over to the right?",
+  options: ["Unless any vehicle approaches from behind, you may stay in the left lane to keep a greater distance from any wildlife on the road.", "You're always required to keep right on high speed roads unless passing.", "You may stay in the left lane as long as you're driving at the speed limit.", "Only if emergency vehicles with flashing lights are approaching you from behind."],
+  chapter: "Chapter 4: Rules of the road",
+  source: "If there's no traffic behind you it is permitted to drive in the left lane.  On rural roads it is sometimes safer to stay in the left to avoid wildlife near the highway.  When a vehicle approaches from behind move over to the right to let them pass. ",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers4.pdf",
+  image: "images/q167.png"
+  },
+  {
+  question: "Can I listen to music from my electronic device while driving?",
+  options: ["Yes, you can listen to music from an electronic device while driving, provided that it is connected to the in-vehicle audio system, and you don't touch any electronic devices while operating the vehicle.", "Yes, you can listen to music from an electronic device while driving, provided that you are wearing earbuds or an ear piece", "No, you may not connect your electronic device in advance and listen to music with your in-vehicle system.", "Yes, you can listen to music from an electronic device while driving, as long as the device is securely attached to the vehicle's dashboard."],
+  chapter: "Chapter 7: Personal Strategies; Keeping Focused",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "Which of the following would not qualify as an emergency call that I can make while driving?",
+  options: ["To a family member", "To the police", "To the fire department", "To ambulance services "],
+  chapter: "Chapter 7: Personal Strategies; Keeping Focused ",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "When can I use a personal electronic device if I'm in the Graduated Licensing Program (GLP)?",
+  options: ["I cannot use a personal electronic device in the GLP", "I've been in the program for at least six months", "I've secured my cell phone to the vehicle", "I'm using a speaker phone or hands-free phone "],
+  chapter: "Chapter 7: Personal Strategies; Keeping Focused",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+  },
+  {
+  question: "If I am at a red light or stopped in traffic, can I look at a text I just received?",
+  options: ["No, you may not operate your cell phone while on the road including when you're stopped in traffic.", "Yes, you can quickly look at your screen but not reply to any messages.", "Yes, whenever a vehicle is not moving means you're not driving.", "Yes, as long as the light has just turned red. You have about a minute to safely use your phone."],
+  chapter: "Chapter 7: Personal Strategies; Keeping Focused",
+  source: "",
+  link: "http://www.icbc.com/driver-licensing/Documents/drivers7.pdf"
+}]
